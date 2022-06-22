@@ -1,0 +1,380 @@
+@import "../../assets/stylesheets/variables";
+@import "../../assets/stylesheets/functions";
+
+html {
+  height: 100%;
+
+  body {
+    min-height: 100% !important;
+    background-color: $app-background-color !important;
+    font-family: $font-family-poppins !important;
+    vertical-align: center;
+
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-outline-primary:active,
+    .btn-outline-primary:focus {
+      box-shadow: 0 0 0 2px alphaValue($label-hover-border-color, 0.2) !important;
+    }
+
+    .btn-primary {
+      color: $btn-primary-text-color !important;
+      text-decoration: none;
+      background: transparent !important;
+      background-color: $btn-primary-color !important;
+      border-color: $btn-primary-color !important;
+      text-shadow: none;
+      font-family: $font-family-poppins;
+
+      &:hover,
+      &:focus {
+        background: $navy-blue-dk !important;
+        border-color: $label-hover-border-color !important;
+      }
+    }
+
+    .btn-outline-primary {
+      background: transparent !important;
+      border: 3px solid $btn-primary-color !important;
+      color: $btn-primary-color !important;
+      text-decoration: none;
+      text-shadow: none;
+      font-family: $font-family-poppins;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: $label-hover-border-color !important;
+        color: $btn-primary-text-color !important;
+      }
+    }
+
+    .btn-secondary:active,
+    .btn-secondary:focus,
+    .btn-outline-secondary:active,
+    .btn-outline-secondary:focus {
+      box-shadow: 0 0 0 2px alphaValue($btn-secondary-color, 0.2) !important;
+    }
+
+    .btn-secondary {
+      color: $btn-primary-text-color;
+      text-decoration: none;
+      background: transparent;
+      background-color: $btn-secondary-color;
+      border-color: $btn-secondary-color;
+      text-shadow: none;
+      font-family: $font-family-poppins;
+      font-weight: $font-bold;
+
+      &:hover,
+      &:focus {
+        background: $label-hover-border-color !important;
+        border-color: $label-hover-border-color !important;
+      }
+    }
+
+    .btn-outline-secondary {
+      background: transparent;
+      border: 3px solid $btn-secondary-color !important;
+      color: $btn-secondary-color !important;
+      text-decoration: none;
+      text-shadow: none;
+      font-family: $font-family-poppins;
+      font-weight: $font-bold;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: $btn-secondary-color !important;
+        color: $btn-secondary-text-color !important;
+        border: 3px solid $btn-secondary-color !important;
+      }
+    }
+
+    h1 {
+      font-size: $font-size-xxxlg;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $label-text-color-dark;
+      font-family: $font-family-lora;
+    }
+
+    .bg-primary {
+      background-color: $app-primary-color !important;
+    }
+
+    .accordion-button {
+      background-image: none !important;
+
+      &:not(.collapsed) {
+        color: $label-text-color-dark;
+        background-color: $white;
+      }
+    }
+
+    .accordion-item {
+      margin-bottom: 1rem;
+      border: 4px solid rgba(46, 89, 152, 0.2) !important;
+    }
+
+    .card {
+      border-radius: 16px !important;
+      box-shadow: 0 0.5rem 1rem alphaValue($black / 0.15) !important;
+      background-color: $card-background;
+      border: none;
+      font-family: $font-family-poppins;
+      min-height: 100px;
+    }
+
+    .dropdown-menu {
+      margin-top: 1px !important;
+      border: none;
+
+      a {
+        text-decoration: none;
+        padding: 10px 17px;
+
+        &:link,
+        &:visited {
+          color: $header-label-color;
+          background-color: transparent;
+          font-family: $font-family-poppins;
+        }
+
+        &:hover {
+          color: $footer-link-hover-color;
+          background-color: $app-background-color;
+        }
+      }
+    }
+
+    .pagination {
+      margin-left: 0;
+      z-index: 0;
+
+      .page-link {
+        border-radius: 3px;
+        height: 35px;
+        line-height: 20px;
+        width: 36px;
+        background: none;
+        color: $pagination-color;
+        text-decoration: none;
+        border: 3px solid $pagination-color;
+        font-size: $font-size-md;
+        font-family: $font-family-poppins;
+        font-weight: $font-bold;
+        text-align: center;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $label-hover-border-color !important;
+          border: 3px solid $label-hover-border-color !important;
+        }
+      }
+    }
+
+    .category-type {
+      color: $btn-primary-color;
+      font-size: $font-size-sm;
+      font-family: $font-family-poppins;
+      font-weight: $font-bold;
+      letter-spacing: 3px;
+      line-height: 21px;
+      text-transform: uppercase;
+    }
+
+    p {
+      line-height: 28px;
+      margin-bottom: 1.5rem;
+    }
+
+    .icon {
+      font-size: $icon-size-md;
+      color: $app-secondary-color;
+    }
+
+    .icon {
+      font-size: $icon-size-md;
+      color: $app-secondary-color;
+    }
+
+    form {
+      label {
+        color: $card-description-text-color;
+        margin-bottom: 5px;
+      }
+
+      input,
+      select {
+        width: 100% !important;
+        height: 48px;
+        background-color: $app-background-color !important;
+        font-family: $font-family-poppins !important;
+        border: 2px solid alphaValue($navy-blue-dk, 0.2) !important;
+        border-radius: 4px !important;
+        font-weight: $font-bold !important;
+
+        &:focus {
+          border: 2px solid alphaValue($navy-blue-dk, 0.2) !important;
+          box-shadow: 0 0 0 2px alphaValue($btn-secondary-color, 0.2) !important;
+        }
+      }
+
+      textarea {
+        width: 100% !important;
+        background-color: $app-background-color !important;
+        font-family: $font-family-poppins !important;
+        border: 2px solid alphaValue($navy-blue-dk, 0.2) !important;
+        border-radius: 4px !important;
+        font-weight: $font-bold !important;
+
+        &:focus {
+          border: 2px solid alphaValue($navy-blue-dk, 0.2) !important;
+          box-shadow: 0 0 0 2px alphaValue($btn-secondary-color, 0.2) !important;
+        }
+      }
+
+      // TODO this Fix
+      .not-required,
+      .control-label {
+        &:after {
+          content: " *";
+          color: $red;
+        }
+      }
+    }
+
+    abbr {
+      color: $red;
+    }
+
+    .main-content-body {
+      padding: 81px 0px 0px;
+    }
+
+    .date {
+      color: $card-description-text-color;
+      font-size: $font-size-sm;
+    }
+
+    table {
+      margin-top: 1rem;
+      color: $table-text-color;
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 1em;
+
+
+      img {
+        display: block;
+      }
+
+      span {
+        color: $app-primary-color;
+      }
+
+      td {
+        padding: 1rem 0;
+        color: $header-label-color;
+        font-weight: $font-bold !important;
+        vertical-align: middle;
+        padding-right: 5px;
+
+        .form-check-label {
+          color: $home-label-text-color-dark;
+          text-transform: uppercase;
+          font-size: $font-size-sm;
+        }
+      }
+
+      th {
+        font-family: $font-family-lora;
+        background: transparent;
+        font-weight: $font-extra-bold;
+        padding: 1rem 0;
+        padding-right: 5px;
+      }
+
+      .sub-th {
+        font-size: $font-size-sm;
+        letter-spacing: 0;
+      }
+
+      thead {
+        color: $table-header-color !important;
+        border: 0px;
+      }
+
+      tbody tr {
+        margin: 5px;
+        border-radius: 10px;
+        border: 1px solid $border-lt;
+        border-width: 1px 0;
+      }
+    }
+
+    .clickable-label {
+      color: $app-primary-color;
+      font-weight: $font-bold;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+        color: $label-hover-border-color;
+      }
+    }
+  }
+
+  blockquote {
+    font-size: $font-size-lg;
+    color: $app-primary-color;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    line-height: 28px;
+
+    &::before {
+      content: "";
+      background-image: url("/assets/quote-icon.svg");
+      background-size: 45px 45px;
+      height: 45px;
+      width: 45px;
+      color: $app-secondary-color;
+      vertical-align: middle;
+      position: absolute;
+      left: -20px;
+    }
+  }
+}
+
+span.ms-auto.badge.badge-success {
+  padding: 0.5rem;
+  background-color: $app-secondary-color;
+  font-size: $font-size-sm;
+  width: 97px;
+  border-radius: 12px;
+}
+
+span.ms-auto.badge.badge-primary {
+  padding: 0.5rem;
+  background-color: $app-primary-color;
+  font-size: $font-size-sm;
+  width: 97px;
+  border-radius: 12px;
+}
+
+span.ms-auto.badge.badge-danger {
+  padding: 0.5rem;
+  background-color: $red;
+  font-size: $font-size-sm;
+  width: 97px;
+  border-radius: 12px;
+}
