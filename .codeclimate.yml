@@ -1,0 +1,60 @@
+version: "2"
+# cole climate run in local:
+# https://medium.com/@empressia/run-code-climate-locally-e30635321e18
+# setup command
+# sudo docker run --interactive --tty --rm --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/ docker.sock  --volume /tmp/cc:/tmp/cc codeclimate/codeclimate engines:install
+# local run command
+# sudo docker run --interactive --tty --rm --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/ docker.sock  --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze > climate_report.html
+checks:
+  similar-code:
+    config:
+      threshold: 100
+plugins:
+  scss-lint:
+    enabled: true
+    checks:
+      PropertySortOrder:
+        enabled: false
+      DeclarationNoImportant:
+        enabled: false
+  bundler-audit:
+    enabled: true
+  csslint:
+    enabled: true
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  reek:
+    enabled: true
+    config: ".reek.yml"
+  rubocop:
+    enabled: true
+    channel: rubocop-0-92
+  brakeman:
+    enabled: true
+  flog:
+    enabled: true
+    config:
+      score_threshold: 25.0
+
+exclude_patterns:
+- "config/"
+- "db/"
+- "dist/"
+- "features/"
+- "**/node_modules/"
+- "script/"
+- "**/spec/"
+- "**/test/"
+- "**/tests/"
+- "Tests/"
+- "**/vendor/"
+- "**/*_test.go"
+- "**/*.d.ts"
+- "bin/"
+- "lib/creek/"
+- "client/dist/"
+- "log/"
+- "cypress/"
+
